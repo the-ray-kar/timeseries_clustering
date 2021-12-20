@@ -9,6 +9,6 @@ from tseries_clustering import tseries_clusterer
 data = [ ndarray1, ndarray2,.....] -> list #ndarray is a time_series of shape time_steps x features
 
 clusterer = tseries_clusterer(data)
-#labels = clusterer.kmeans()
+#labels = clusterer.kmeans(clusters=3)
 labels = clusterer.dbscan()
 ```
