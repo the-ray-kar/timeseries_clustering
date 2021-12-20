@@ -10,5 +10,5 @@ data = [ ndarray1, ndarray2,.....] -> list #ndarray is a time_series of shape ti
 
 clusterer = tseries_clusterer(data)
 #labels = clusterer.kmeans(clusters=3)
-labels = clusterer.dbscan()
+labels = clusterer.dbscan(eps=0.1,min_neighbours=3)
 ```
