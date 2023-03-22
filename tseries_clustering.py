@@ -17,7 +17,7 @@ class tseries_clusterer:
     
     def dbscan(self,eps=0.1,min_neighbours=3):
         start = time.time()
-        if self.distance_matrix!=None:
+        if self.distance_matrix==None:
             self.distance_matrix = cdist_dtw(self.data,self.data) #will take considerable amount of time
         end = time.time()
         print("Similarity matix precomputed, took ",(end-start),"seconds for data size",len(self.data),"\n and shape",self.data[0].shape)
